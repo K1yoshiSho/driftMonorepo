@@ -1,0 +1,29 @@
+name: cache
+description: repository for caching
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0-9.0.dev <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  drift: ^2.7.0
+  sqlite3_flutter_libs: ^0.5.13
+  path_provider: ^2.0.14
+  path: ^1.8.3
+  get_it: ^7.2.0
+  models:
+    path: ../models
+  injectable: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: ^2.7.0
+  build_runner: ^2.3.3
+
+flutter:
+  uses-material-design: true

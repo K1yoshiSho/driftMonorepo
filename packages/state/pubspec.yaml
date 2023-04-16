@@ -1,0 +1,25 @@
+name: state
+description: repository for state management
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0-9.0.dev <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  repositories:
+    path: ../repositories
+  models:
+    path: ../models
+
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  get_it: ^7.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
