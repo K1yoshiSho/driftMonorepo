@@ -1,4 +1,6 @@
+import 'package:drift_melos_workspace/src/presentation/features/main/test_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({
@@ -43,6 +45,12 @@ class DetailsScreenState extends State<DetailsScreen> {
                 });
               },
               child: const Text('Increment counter'),
+            ),
+            TextButton(
+              onPressed: () {
+                GoRouter.of(context).go(TestScreen.path);
+              },
+              child: const Text('Go test'),
             ),
           ],
         ),

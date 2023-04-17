@@ -4,7 +4,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.0-9.0.dev <4.0.0'
+  # sdk: '>=3.1.0-9.0.dev <4.0.0'
+  sdk: ">=2.19.0 <3.0.0"
 dependencies:
   flutter:
     sdk: flutter
@@ -13,7 +14,7 @@ dependencies:
   drift: ^2.7.0
   sqlite3_flutter_libs: ^0.5.13
   path_provider: ^2.0.14
-  path: ^1.8.3
+  path: ^1.8.2
   get_it: ^7.2.0
   models:
     path: ../models

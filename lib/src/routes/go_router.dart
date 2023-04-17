@@ -28,16 +28,26 @@ final GoRouter _router = GoRouter(
           builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
           routes: <RouteBase>[
             GoRoute(
-              path: DetailsScreen.route,
-              name: DetailsScreen.name,
-              builder: (BuildContext context, GoRouterState state) => const DetailsScreen(label: 'A'),
-            ),
+                path: DetailsScreen.route,
+                name: DetailsScreen.name,
+                pageBuilder: (BuildContext context, GoRouterState state) =>
+                    const NoTransitionPage(child: DetailsScreen(label: 'A')),
+                routes: [
+                  GoRoute(
+                    path: TestScreen.route,
+                    name: TestScreen.name,
+                    pageBuilder: (context, state) => NoTransitionPage(
+                      key: state.pageKey,
+                      child: const TestScreen(),
+                    ),
+                  ),
+                ]),
           ],
         ),
         GoRoute(
           path: SettingsScreen.route,
           name: SettingsScreen.name,
-          builder: (BuildContext context, GoRouterState state) => const SettingsScreen(),
+          pageBuilder: (BuildContext context, GoRouterState state) => const NoTransitionPage(child: SettingsScreen()),
         ),
       ],
     ),

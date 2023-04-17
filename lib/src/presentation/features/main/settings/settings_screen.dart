@@ -14,10 +14,10 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
+          children: const <Widget>[
             Text('Settings Screen', style: TextStyle(fontSize: 24)),
             Padding(padding: EdgeInsets.all(4)),
             Padding(padding: EdgeInsets.all(4)),
